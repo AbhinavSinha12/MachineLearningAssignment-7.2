@@ -19,7 +19,46 @@ Test Set: Some of the data set are preserved for testing the accuracy and verifc
 4. What is the general principle of an ensemble method and what is bagging and
 boosting in ensemble method?
 
+Ensemble is basically  a Machine Learning concept in which the idea is to train multiple models using the same learning algorithm. 
+The ensembles take part in a bigger group of methods, called multiclassifiers, where a set of hundreds or thousands of learners 
+with a common objective are fused together to solve the problem.
+
+Ensemble methods are supervized learning models which combine the predictions of multiple
+smaller models to improve predictive power and generalization.
+The smaller models that combine to make the ensemble model are referred to as base models.
+Ensemble methods often result in considerably higher performance than any of the individual base
+models could achieve.
+
+BAGGING
+Several estimators are built independently on subsets of the data and their predictions are
+averaged. Typically the combined estimator is usually better than any of the single base estimator
+Bagging can reduce variance with little to no effect on bias.
+
+ex: Random Forests
+
+BOOSTING
+Base estimators are built sequentially. Each subsequent estimator focuses on the weaknesses of
+the previous estimators. In essence several weak models "team up" to produce a powerful
+ensemble model. (We will discuss these later this week.)
+Boosting can reduce bias without incurring higher variance.
+
+ex: Gradient Boosted Trees, AdaBoost
 
 
 5. How can you avoid overfitting ?
   
+Overfitting happens when model fits too well to the training set. It then becomes difficult for the model to
+generalize to new examples that were not in the training set. For example, if the model recognizes specific
+images in your training set instead of general patterns. Our training accuracy will be higher than the accuracy on the
+validation/test set. So we can do the following steps to reduce overfitting.
+
+Steps for avoiding overfitting: 
+
+ a) Cross-validation: Cross-validation is technique which generates multiple small train-set splits. The model is trained cyclically over these train-sets.
+ b) Train with more data: If we train our model with more clean and relevant data more accurate model are created.
+ c) Remove features: Some algorithms have built-in feature selection. For those that don’t, we can manually improve their generalizability by removing irrelevant input features.
+ d) Early stopping: This is critical point to Stop the training process as soon as the trainer passes the learning point.
+ 
+ e) Regularization: Regularization are the techniques which stops model to become complex.
+ 
+ f) Ensembling: Ensembles are machine learning methods for combining predictions from multiple separate models. 
